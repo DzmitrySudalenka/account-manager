@@ -1,5 +1,50 @@
-# Vue 3 + TypeScript + Vite
+# Account Management System (Vue 3 + TypeScript)
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Тестовое задание на позицию Frontend Developer. Приложение для управления учетными записями с поддержкой различных типов авторизации (LDAP/Local), валидацией и сохранением данных.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## 🚀 Live Demo
+**[Посмотреть проект онлайн](https://dzmitrysudalenka.github.io/account-manager/)**
+
+---
+
+## 🛠 Технологии
+- **Framework:** [Vue.js 3](https://vuejs.org) (Composition API)
+- **Language:** [TypeScript](https://www.typescriptlang.org)
+- **State Manager:** [Pinia](https://pinia.vuejs.org)
+- **UI Library:** [Element Plus](https://element-plus.org)
+- **Build Tool:** [Vite](https://vitejs.dev)
+
+---
+
+## 📋 Особенности реализации
+- **Динамические формы:** Поля меняются в зависимости от выбранного типа записи (LDAP/Локальная).
+- **Трансформация данных:** Поле "Метка" автоматически преобразуется из строки в массив объектов при вводе.
+- **Валидация:** Проверка обязательных полей при потере фокуса (`blur`) или изменении селекта.
+- **Persistence:** Данные синхронизируются с `localStorage` и сохраняются при перезагрузке страницы.
+
+---
+
+## 💻 Локальный запуск
+
+1. **Клонируйте репозиторий:**
+   ```bash
+   git clone https://github.com/DzmitrySudalenka/account-manager.git
+   cd account-manager
+
+Установите зависимости:
+bash
+npm install
+
+Запустите сервер для разработки:
+bash
+npm run dev
+
+Приложение будет доступно по адресу: http://localhost:5173
+Сборка проекта:
+bash
+npm run build
+
+📝 Структура проекта
+src/stores/useAccountStore.ts — логика управления состоянием и работа с LocalStorage.
+src/components/AccountForm.vue — основной компонент формы с логикой валидации и парсинга меток.
+src/env.d.ts — декларация типов для Vue-компонентов.
