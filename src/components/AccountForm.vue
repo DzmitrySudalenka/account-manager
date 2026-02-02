@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useAccountStore, type Account } from '../stores/useAccountStore';
-import { Delete, QuestionFilled } from '@element-plus/icons-vue';
+import { Delete } from '@element-plus/icons-vue';
 
 const store = useAccountStore();
 
@@ -84,7 +84,7 @@ const isInvalid = (val: string | null, max: number) => {
 <style scoped>
 .container { padding: 20px; max-width: 1200px; }
 .header { display: flex; align-items: center; gap: 20px; margin-bottom: 20px; }
-.account-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) 50px; gap: 15px; margin-bottom: 20px; align-items: end; }
+.account-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) 50px; gap: 15px; margin-bottom: 20px; }
 .is-error :deep(.el-input__wrapper) { box-shadow: 0 0 0 1px red inset !important; }
 .hint { margin-bottom: 20px; }
 </style>
