@@ -30,19 +30,23 @@
    ```bash
    git clone https://github.com/DzmitrySudalenka/account-manager.git
    cd account-manager
-
+   ```
+   
 Установите зависимости:
    ```bash
    npm install
+   ```
 
 Запустите сервер для разработки:
    ```bash
    npm run dev
+   ```
 
 Приложение будет доступно по адресу: http://localhost:5173
 Сборка проекта:
    ```bash
    npm run build
+   ```
 
 📝 Структура проекта
 src/stores/useAccountStore.ts — логика управления состоянием и работа с LocalStorage.
